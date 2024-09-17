@@ -92,6 +92,16 @@ class Entrenador {
     void setRango(string rango) {_rango = rango;}
     void setNivel(int nivel) {_nivel = nivel;}
 
+//metodo para agregar pokemones en el Dec del entrenador
+void agregarpokemon(Pokemon p){
+    if(misPokemones.size()>=5){
+        cout<<"No hay espacio suficiente en tu Dec para agregar otro Pokemon!"<<endl;
+    }else{
+        misPokemones.push_back(p);
+    
+}
+
+
     void ascenderRango() {
         if (nivel>=10){
             setRango("Novato");
@@ -128,9 +138,8 @@ class Entrenador {
         setNivel(getNivel()+ 5);
     }
     
-
-    
 }
+
 
 class Batalla {
     private:
@@ -139,6 +148,25 @@ class Batalla {
 
     public:
     //Este metodo recibe entrenadores para utilizar sus pokemones para la batalla
+    void mostrarMenu() {
+        int opcion;
+        do {
+            cout << "\n--- Menu Juego Pokemon "<<"  ---\n";
+            cout << "1. Escoger Pokemones\n";
+            cout << "2. Luchar\n";
+            cout << "3. Escoger entrenadores\n";
+            cout << "4. Salir\n";
+            cout<<  "5. Lista de entrenadores y pokemones ingresados\n";
+            cout << "Seleccione una opcion: ";
+            cin >> opcion;
+
+            switch (opcion) {
+                case 1:
+
+
+
+
+            }
     void luchar(Entrenador &yo, Pokemon &oponente) {
     int vidaOponente, vidaMiPok, ataqueMiPok, ataqueOponente, nivelMipok, nivelOponente, xpMiPok, xpOponente, ronda = 1;
     bool ganador = true; // true para mi pokemon, false si no
